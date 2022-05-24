@@ -7,13 +7,11 @@ import { About } from './sections/AboutSection/About/About'
 
 export const App = () => {
   return (
-    <Router >
-      <HashRouter basename='/'>
+    <Router basename='/'>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
       </Routes>
-      </HashRouter>
     </Router>
   )
 }
