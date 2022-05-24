@@ -2,7 +2,7 @@
   "name": "mati-tok",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://matiassalicru.github.io/portfolio-matisalicru",
+  "homepage": "https://matiassalicru.github.io/portfolio-personal-2022/",
   "scripts": {
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build",
