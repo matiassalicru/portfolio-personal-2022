@@ -8,7 +8,7 @@ export const BottomBar = () => {
         <SCImg src={code}/><SCText> with 🧡 in Argentina.</SCText>
       </SCLeft>
       <SCRight>
-        <SCText>Powered by React - Vite - Styled Components</SCText>
+        <SCText>Powered by React - Vite - Styled Components - Vercel 💜</SCText>
       </SCRight>
     </SCContainer>
   )

@@ -105,7 +105,7 @@ export const Contact = () => {
           </a>
         </SCSocialItem>
       </SCSocialList>
-      {showAlert && <Alert time={2} text='Email copiado!'/>}
+      {showAlert && <Alert time={2} text='Email Copied!!'/>}
     </SCContainer>
   )
 }
