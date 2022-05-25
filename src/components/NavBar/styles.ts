@@ -10,6 +10,7 @@ export const SCLogo = styled.span`
 export const SCButtonContainer = styled.div`
   display: flex;
   width: 200px;
+
 `
 
 export const SCNavContainer = styled.div`

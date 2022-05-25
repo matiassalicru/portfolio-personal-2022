@@ -7,7 +7,7 @@ import { About } from './sections/AboutSection/About/About'
 
 export const App = () => {
   return (
-    <Router basename='/'>
+    <Router>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>

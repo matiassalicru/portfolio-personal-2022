@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom'
 import Lottie from 'react-lottie'
 import animationData from '../../lotties/72422-code.json'
 import { LinkButton } from '../LinkButton/LinkButton'
+import { PRIMARY_COLOR } from '../../utils/constants'
 
 interface NavBarTypes {
   showNavList?: boolean
@@ -36,11 +37,19 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
 
   const onNotAvailable = () => {
     SwalModal.fire({
-      timer: 2000,
-      text: 'This section is not available yet',
+      timer: 3000,
+      title: 'This section is not available yet',
+      width: 380,
       icon: 'warning',
+      customClass: 'sweetalert',
+      position: 'bottom-end',
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      },
+      toast: true,
       showConfirmButton: false,
-      background: '#112233',
     })
   }
 
@@ -80,7 +89,7 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
         </SCNavlist>
       ) : (
         <SCButtonContainer> 
-          <LinkButton>Volver al inicio</LinkButton>
+          <LinkButton>Back to home</LinkButton>
         </SCButtonContainer>
       )}
     </SCNavContainer>

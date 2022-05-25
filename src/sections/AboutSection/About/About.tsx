@@ -33,7 +33,6 @@ export const About = () => {
           passion for the web development. My locked 2020 was a deep learning on coding, now I live with my beatiful
           girlfriend, my cat Sam 🐈, and working on something that I love.
         </SCParagraph>
-          <SCParagraph>()</SCParagraph>
       </SCAboutContainer>
     </>
   )
