@@ -1,3 +1,5 @@
+
+// Styles
 import {
   SCButtonContainer,
   SCNavContainer,
@@ -9,14 +11,15 @@ import {
   SCLogo,
 } from './styles'
 
+// Components
+import Lottie from 'react-lottie'
+import { useNavigate } from 'react-router-dom'
+import { LinkButton } from '../LinkButton/LinkButton'
 import Swal from 'sweetalert2/dist/sweetalert2.all.js'
 import withReactContent from 'sweetalert2-react-content'
-import { useNavigate } from 'react-router-dom'
 
-import Lottie from 'react-lottie'
+// Data
 import animationData from '../../lotties/72422-code.json'
-import { LinkButton } from '../LinkButton/LinkButton'
-import { PRIMARY_COLOR } from '../../utils/constants'
 
 interface NavBarTypes {
   showNavList?: boolean

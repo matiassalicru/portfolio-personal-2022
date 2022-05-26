@@ -16,7 +16,7 @@ export const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowAlert(false)
-    }, 1500);
+    }, 2500);
   })
   return (
     <SCContainer>
@@ -25,7 +25,7 @@ export const Home = () => {
       <SectionContainer />
       <BottomBar />
       <SCAlertContainer>
-        {showAlert && <Alert time={1.5} text="Let's explore!"/>}
+        {showAlert && <Alert time={2.5} text="Let's explore!"/>}
       </SCAlertContainer>
     </SCContainer>
   )
