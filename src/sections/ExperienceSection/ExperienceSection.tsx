@@ -1,5 +1,13 @@
+// Components
 import { Box } from '../../components/Box/Box'
+import { LinkButton } from '../../components/LinkButton/LinkButton'
+import Swal from 'sweetalert2/dist/sweetalert2.all.js'
+import withReactContent from 'sweetalert2-react-content'
+
+// Data
 import { brainTtText, corText, freelanceText } from './data'
+
+// Styles
 import {
   SChr,
   SCLogo,
@@ -17,7 +25,6 @@ import FreelanceLogo from '../../lotties/memoji.png'
 import js from '../../lotties/js.png'
 import html from '../../lotties/html.png'
 import css from '../../lotties/css.png'
-import react from '../../lotties/react.png'
 import git from '../../lotties/git.png'
 import docker from '../../lotties/docker.png'
 import github from '../../lotties/github.png'
@@ -26,7 +33,28 @@ import typescript from '../../lotties/typescript.png'
 import jest from '../../lotties/jest.png'
 import reactLogo from '../../lotties/react-logo.png'
 
+
 export const ExperienceSection = () => {
+  const SwalModal = withReactContent(Swal)
+
+  const onNotAvailable = () => {
+    SwalModal.fire({
+      timer: 3000,
+      title: 'This section is not available yet',
+      width: 380,
+      icon: 'warning',
+      customClass: 'sweetalert',
+      position: 'bottom-end',
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      },
+      toast: true,
+      showConfirmButton: false,
+    })
+  }
+  
   return (
     <SCContainer id='experience'>
       <SCTitle>Experience</SCTitle>
@@ -68,6 +96,11 @@ export const ExperienceSection = () => {
           <SCLogo src={docker} />
         </SCSkillWrapper>
       </SCSkillsContainer>
+      <SCBoxContainer onClick={onNotAvailable}>
+        <LinkButton url=''> 
+          Check my personal projects!
+        </LinkButton>
+      </SCBoxContainer>
     </SCContainer>
   )
 }
