@@ -42,8 +42,21 @@ export const SCImg = styled.img`
   border-radius: 50%;
 `
 
+export const SCTilteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 export const SCTitle = styled.h3`
+  margin-bottom: 0;
   font-size: 20px;
+`
+
+export const SCSubtitle = styled.h5`
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
 `
 
 export const SCText = styled.p`

@@ -5,7 +5,16 @@ import { NavBar } from '../../../components/NavBar/NavBar'
 import { SCText } from '../styles'
 
 // Styles
-import { SCAboutContainer, SCParagraph, SCTitle } from './styles'
+import {
+  SCAboutContainer,
+  SCParagraph,
+  SCTitle,
+  SCTextWrapper,
+  SCImg,
+} from './styles'
+
+// Assets
+import meSit from '../../../lotties/sit.jpg'
 
 export const About = () => {
   const [showAlert, setShowAlert] = useState(true)
@@ -19,20 +28,20 @@ export const About = () => {
     <>
       <NavBar showNavList={false} />
       <SCAboutContainer>
+        <SCTextWrapper>
+          <SCTitle>Hola!</SCTitle>
+          <SCParagraph>
+            My name is Matias and I'm from Córdoba, Argentina, I'm a frontend
+            developer who is passioned about technology, I'm always curious
+            about the lastest tech thing including smartphones, videogames, PC
+            hardware, etc. I have a mindset of never stop learning so I'm always
+            doing some courses (actually learning web3 - blockchain develoment
+            ⛓). I like reading, and I have a Cat named Sam 🐈 (she's almost
+            always on camera behind me).
+          </SCParagraph>
+        </SCTextWrapper>
         {showAlert && <Alert time={1.5} text='This is me! :D' />}
-        <SCTitle>Hola!</SCTitle>
-        <SCParagraph>
-          My name is Matías and I'm a front-end developer. I grow up in a small
-          town called Valle viejo in the province of Catamarca in Argentina, and
-          since my parents bring that first computer when I was 8, I was shocked
-          by technology, I always followed the news about the new tech thing
-          that was coming, and I got my first gaming pc at the age of 18 (a gift
-          for my birthday), then my passion about technology didn't do anything
-          but growing up, and then in a trip with my family in 2019 (just before pandemic) I
-          realized that I wanted to work in Tech somehow, so then it begun my
-          passion for the web development. My locked 2020 was a deep learning on coding, now I live with my beatiful
-          girlfriend, my cat Sam 🐈, and working on something that I love.
-        </SCParagraph>
+        <SCImg src={meSit} />
       </SCAboutContainer>
     </>
   )

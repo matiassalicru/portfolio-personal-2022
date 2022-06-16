@@ -5,7 +5,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.all.js'
 import withReactContent from 'sweetalert2-react-content'
 
 // Data
-import { brainTtText, corText, freelanceText } from './data'
+import { experiences } from './data'
 
 // Styles
 import {
@@ -19,9 +19,6 @@ import {
 } from './styles'
 
 // Images/Logos
-import CORLogo from '../../lotties/cor-logo.png'
-import BrainITLogo from '../../lotties/brain-it.png'
-import FreelanceLogo from '../../lotties/memoji.png'
 import js from '../../lotties/js.png'
 import html from '../../lotties/html.png'
 import css from '../../lotties/css.png'
@@ -32,7 +29,6 @@ import styled from '../../lotties/styled.png'
 import typescript from '../../lotties/typescript.png'
 import jest from '../../lotties/jest.png'
 import reactLogo from '../../lotties/react-logo.png'
-
 
 export const ExperienceSection = () => {
   const SwalModal = withReactContent(Swal)
@@ -54,14 +50,21 @@ export const ExperienceSection = () => {
       showConfirmButton: false,
     })
   }
-  
+
   return (
     <SCContainer id='experience'>
       <SCTitle>Experience</SCTitle>
       <SCBoxContainer>
-        <Box title='Brain IT' text={brainTtText} image={BrainITLogo} date='Jul 2021 - Sep 2021' />
-        <Box title='COR Global Ltd.' text={corText} image={CORLogo} date='Jul 2021 - Present' />
-        <Box title='Freelance' text={freelanceText} image={FreelanceLogo} date='Jul 2020 - Jul 2021' />
+        {!!experiences.length &&
+          experiences.map(({ title, subtitle, text, image, date }) => (
+            <Box
+              title={title}
+              subtitle={subtitle}
+              text={text}
+              image={image}
+              date={date}
+            />
+          ))}
       </SCBoxContainer>
       <SChr />
       <SCSkillsContainer>
@@ -97,9 +100,7 @@ export const ExperienceSection = () => {
         </SCSkillWrapper>
       </SCSkillsContainer>
       <SCBoxContainer onClick={onNotAvailable}>
-        <LinkButton url=''> 
-          Check my personal projects!
-        </LinkButton>
+        <LinkButton url=''>Check my personal projects!</LinkButton>
       </SCBoxContainer>
     </SCContainer>
   )

@@ -3,15 +3,33 @@ import { BACKGROUND_COLOR } from '../../../utils/constants'
 
 export const SCAboutContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 50px;
   background: ${BACKGROUND_COLOR};
   min-height: 100vh;
+  padding: 100px 0;
+
+`
+
+export const SCTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+
+  &:first-child {
+    max-width: 700px;
+  }
+`
+
+export const SCImg = styled.img`
+  height: auto;
+  width: 400px;
+  border-radius: 15px;
 `
 
 export const SCTitle = styled.h2`
-  margin-top: 200px;
   font-weight: 300;
   font-size: 32px;
   font-style: italic;
