@@ -29,6 +29,7 @@ import styled from '../../lotties/styled.png'
 import typescript from '../../lotties/typescript.png'
 import jest from '../../lotties/jest.png'
 import reactLogo from '../../lotties/react-logo.png'
+import { randomUUID } from 'crypto'
 
 export const ExperienceSection = () => {
   const SwalModal = withReactContent(Swal)
@@ -56,8 +57,9 @@ export const ExperienceSection = () => {
       <SCTitle>Experience</SCTitle>
       <SCBoxContainer>
         {!!experiences.length &&
-          experiences.map(({ title, subtitle, text, image, date }) => (
+          experiences.map(({ title, subtitle, text, image, date }, i) => (
             <Box
+              key={i}
               title={title}
               subtitle={subtitle}
               text={text}

@@ -1,6 +1,22 @@
 import styled from 'styled-components'
 import { PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from '../../utils/constants'
 
+export const SCTopLeftContent = styled.div`
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px;
+  background: #24272b;
+`
+
+export const SCTopRightContent = styled.div`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px 0;
+  background: #24272b;
+`
+
 export const SCLogo = styled.span`
   display: flex;
   height: fit-content;
@@ -14,31 +30,19 @@ export const SCButtonContainer = styled.div`
 `
 
 export const SCNavContainer = styled.div`
-  position: fixed;
-  width: 100vw;
-  background-color: #24272b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  height: 50px;
-  z-index: 2;
+  width: 100%;
 `
 
 export const SCName = styled.p`
   width: max-content;
-  white-space: nowrap;
   font-size: 28px;
   margin: 0 15px;
 `
 
 export const SCNavlist = styled.ul`
   display: flex;
-  justify-content: end;
-  width: 100vw;
-  padding: 16px 20px;
-  margin: 0 20px;
-
+  gap: 40px;
+  margin: 0 50px;
 `
 
 export const SCLink = styled.a`
@@ -74,7 +78,8 @@ export const SCLink = styled.a`
 export const SCItem = styled.li`
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  padding: 0;
+  margin: 0;
 `
 
 export const SCPrimaryButton = styled.button`

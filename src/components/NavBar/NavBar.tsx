@@ -1,8 +1,9 @@
-
 // Styles
 import {
-  SCButtonContainer,
   SCNavContainer,
+  SCTopLeftContent,
+  SCTopRightContent,
+  SCButtonContainer,
   SCNavlist,
   SCLink,
   SCItem,
@@ -63,35 +64,39 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
 
   return (
     <SCNavContainer>
-      <SCLogo onClick={scrollToTop}>
-        <Lottie
-          options={lottieOptions}
-          height={30}
-          width={50}
-          isClickToPauseDisabled
-        />
-        <SCName>Matías Salicrú</SCName>
-      </SCLogo>
+      <SCTopLeftContent>
+        <SCLogo onClick={scrollToTop}>
+          <Lottie
+            options={lottieOptions}
+            height={30}
+            width={50}
+            isClickToPauseDisabled
+          />
+          <SCName>Matías Salicrú</SCName>
+        </SCLogo>
+      </SCTopLeftContent>
       {showNavList ? (
-        <SCNavlist>
-          <SCItem>
-            <SCLink href='#about'>About</SCLink>
-          </SCItem>
-          <SCItem>
-            <SCLink onClick={onNotAvailable} href='#blog'>
-              Blog
-            </SCLink>
-            <SCSoon>Soon</SCSoon>
-          </SCItem>
-          <SCItem>
-            <SCLink href='#experience'>Experience</SCLink>
-          </SCItem>
-          <SCItem>
-            <SCLink href='#contact'>Contact</SCLink>
-          </SCItem>
-        </SCNavlist>
+        <SCTopRightContent>
+          <SCNavlist>
+            <SCItem>
+              <SCLink href='#about'>About</SCLink>
+            </SCItem>
+            <SCItem>
+              <SCLink onClick={onNotAvailable} href='#blog'>
+                Blog
+              </SCLink>
+              <SCSoon>Soon</SCSoon>
+            </SCItem>
+            <SCItem>
+              <SCLink href='#experience'>Experience</SCLink>
+            </SCItem>
+            <SCItem>
+              <SCLink href='#contact'>Contact</SCLink>
+            </SCItem>
+          </SCNavlist>
+        </SCTopRightContent>
       ) : (
-        <SCButtonContainer> 
+        <SCButtonContainer>
           <LinkButton>Back to home</LinkButton>
         </SCButtonContainer>
       )}
