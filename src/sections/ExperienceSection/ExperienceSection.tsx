@@ -1,8 +1,6 @@
 // Components
 import { Box } from '../../components/Box/Box'
 import { LinkButton } from '../../components/LinkButton/LinkButton'
-import Swal from 'sweetalert2/dist/sweetalert2.all.js'
-import withReactContent from 'sweetalert2-react-content'
 
 // Data
 import { experiences } from './data'
@@ -29,28 +27,23 @@ import styled from '../../lotties/styled.png'
 import typescript from '../../lotties/typescript.png'
 import jest from '../../lotties/jest.png'
 import reactLogo from '../../lotties/react-logo.png'
-import { randomUUID } from 'crypto'
+import { useEffect, useState } from 'react'
+import { Alert } from '../../components/Alert/Alert'
 
 export const ExperienceSection = () => {
-  const SwalModal = withReactContent(Swal)
+  const [showAlert, setShowAlert] = useState(false)
 
   const onNotAvailable = () => {
-    SwalModal.fire({
-      timer: 3000,
-      title: 'This section is not available yet',
-      width: 380,
-      icon: 'warning',
-      customClass: 'sweetalert',
-      position: 'bottom-end',
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      },
-      toast: true,
-      showConfirmButton: false,
-    })
+    setShowAlert((prev) => !prev)
   }
+
+  useEffect(() => {
+    if (showAlert) {
+      setTimeout(() => {
+        setShowAlert(false)
+      }, 2500)
+    }
+  }, [showAlert])
 
   return (
     <SCContainer id='experience'>
@@ -104,6 +97,14 @@ export const ExperienceSection = () => {
       <SCBoxContainer onClick={onNotAvailable}>
         <LinkButton url=''>Check my personal projects!</LinkButton>
       </SCBoxContainer>
+
+      {showAlert && (
+        <Alert
+          type='warn'
+          time={2.5}
+          text='This section is not available yet'
+        />
+      )}
     </SCContainer>
   )
 }

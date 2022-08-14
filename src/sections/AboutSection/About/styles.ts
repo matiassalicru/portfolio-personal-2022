@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { BACKGROUND_COLOR } from '../../../utils/constants'
 
 export const SCAboutContainer = styled.div`
   display: flex;
@@ -7,7 +6,7 @@ export const SCAboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 50px;
-  background: ${BACKGROUND_COLOR};
+  background: ${({ theme }) => theme.backgroundColor};
   min-height: 100vh;
   padding: 100px 0;
 
@@ -37,7 +36,6 @@ export const SCTitle = styled.h2`
 
 export const SCParagraph = styled.p`
   display: flex;
-  font-family: sans-serif;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;

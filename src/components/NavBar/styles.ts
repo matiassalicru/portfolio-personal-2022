@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from '../../utils/constants'
 
 export const SCTopLeftContent = styled.div`
   position: absolute;
   left: 10px;
   top: 10px;
   padding: 10px;
-  background: #24272b;
+  background: ${({ theme }) => theme.backgroundColor};
 `
 
 export const SCTopRightContent = styled.div`
@@ -14,7 +13,7 @@ export const SCTopRightContent = styled.div`
   right: 10px;
   top: 10px;
   padding: 10px 0;
-  background: #24272b;
+  background: ${({ theme }) => theme.backgroundColor};
 `
 
 export const SCLogo = styled.span`
@@ -55,13 +54,13 @@ export const SCLink = styled.a`
   background:
     linear-gradient(
       to right,
-      ${PRIMARY_COLOR},
-      ${PRIMARY_COLOR}
+      ${({ theme }) => theme.accentColor},
+      ${({ theme }) => theme.accentColor}
     ),
     linear-gradient(
       to right,
-      ${TERTIARY_COLOR},
-      ${SECONDARY_COLOR},
+      ${({ theme }) => theme.backgroundColor},
+      ${({ theme }) => theme.backgroundSecondaryColor},
       #ff6600
   );
   background-size: 100% 2px, 0 2px;
@@ -102,7 +101,7 @@ export const SCPrimaryButton = styled.button`
 `
 
 export const SCSoon = styled.div`
-  background: #ffffff50;
+  background: ${({ theme }) => theme.backgroundSecondaryColor};
   border-radius: 5px;
   font-size: 12px;
   white-space: nowrap;

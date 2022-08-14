@@ -16,11 +16,11 @@ import {
 import Lottie from 'react-lottie'
 import { useNavigate } from 'react-router-dom'
 import { LinkButton } from '../LinkButton/LinkButton'
-import Swal from 'sweetalert2/dist/sweetalert2.all.js'
-import withReactContent from 'sweetalert2-react-content'
 
 // Data
 import animationData from '../../lotties/72422-code.json'
+import { Alert } from '../Alert/Alert'
+import { useEffect, useState } from 'react'
 
 interface NavBarTypes {
   showNavList?: boolean
@@ -37,30 +37,24 @@ const lottieOptions = {
 
 export const NavBar = ({ showNavList = true }: NavBarTypes) => {
   const navigate = useNavigate()
-  const SwalModal = withReactContent(Swal)
+  const [showAlert, setShowAlert] = useState(false)
 
   const onNotAvailable = () => {
-    SwalModal.fire({
-      timer: 3000,
-      title: 'This section is not available yet',
-      width: 380,
-      icon: 'warning',
-      customClass: 'sweetalert',
-      position: 'bottom-end',
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      },
-      toast: true,
-      showConfirmButton: false,
-    })
+    setShowAlert((prev) => !prev)
   }
 
   const scrollToTop = () => {
     window.scrollTo(0, 0)
     navigate('/')
   }
+
+  useEffect(() => {
+    if (showAlert) {
+      setTimeout(() => {
+        setShowAlert(false)
+      }, 2500)
+    }
+  }, [showAlert])
 
   return (
     <SCNavContainer>
@@ -99,6 +93,13 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
         <SCButtonContainer>
           <LinkButton>Back to home</LinkButton>
         </SCButtonContainer>
+      )}
+      {showAlert && (
+        <Alert
+          type='warn'
+          time={2.5}
+          text='This section is not available yet'
+        />
       )}
     </SCNavContainer>
   )
