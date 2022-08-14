@@ -5,6 +5,7 @@ export const SCButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px;
 `
 
 export const SCLink = styled(Link)`
