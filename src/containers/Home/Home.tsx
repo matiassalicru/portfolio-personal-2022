@@ -39,14 +39,6 @@ export const Home = () => {
 
   return (
     <SCContainer>
-      <SCFixedButtons>
-        <SCThemeButton onClick={changeTheme} type='button'>
-          <FontAwesomeIcon
-            icon={theme?.theme === DARK ? faCloudSun : faMoon}
-            size='lg'
-          />
-        </SCThemeButton>
-      </SCFixedButtons>
       <NavBar />
       <Title />
       <SectionContainer />

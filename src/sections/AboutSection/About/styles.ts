@@ -24,7 +24,7 @@ export const SCTextWrapper = styled.div`
 
 export const SCImg = styled.img`
   height: auto;
-  width: 400px;
+  width: 350px;
   border-radius: 15px;
 `
 
@@ -42,9 +42,8 @@ export const SCParagraph = styled.p`
   font-size: 24px;
   min-height: 100px;
   min-width: fit-content;
-  max-width: 800px;
-  font-weight: lighter;
+  /* max-width: 800px; */
+  font-weight: 400;
   line-height: 36px;
-
-
+  font-family: 'Poppins';
 `
