@@ -1,6 +1,9 @@
+import { useEffect, useState } from 'react'
+
 // Components
 import { Box } from '../../components/Box/Box'
 import { LinkButton } from '../../components/LinkButton/LinkButton'
+import { Alert } from '../../components/Alert/Alert'
 
 // Data
 import { experiences } from './data'
@@ -27,8 +30,6 @@ import styled from '../../lotties/styled.png'
 import typescript from '../../lotties/typescript.png'
 import jest from '../../lotties/jest.png'
 import reactLogo from '../../lotties/react-logo.png'
-import { useEffect, useState } from 'react'
-import { Alert } from '../../components/Alert/Alert'
 
 export const ExperienceSection = () => {
   const [showAlert, setShowAlert] = useState(false)

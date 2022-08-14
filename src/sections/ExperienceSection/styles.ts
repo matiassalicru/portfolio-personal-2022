@@ -11,7 +11,8 @@ export const SCContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 800px;
+  height: fit-content;
+  padding: 20px 0;
   margin: 100px 0;
   width: 100%;
   background-color: ${({ theme }) => theme.backgroundSecondaryColor};
@@ -22,17 +23,26 @@ export const SCTitle = styled.h1`
   font-size: 40px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    margin: 20px 0px;
+  }
 `
 
 export const SCBoxContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `
 
 export const SCSkillsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0 ;
 `
 
 export const SCSkillWrapper = styled.div`
@@ -51,4 +61,6 @@ export const SCSkillWrapper = styled.div`
 export const SCLogo = styled.img`
   width: fit-content;
   max-height: 60px;
+  margin: 10px 0;
+
 `

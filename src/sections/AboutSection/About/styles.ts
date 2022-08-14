@@ -41,7 +41,10 @@ export const SCParagraph = styled.p`
   justify-content: start;
   font-size: 24px;
   min-height: 100px;
+  min-width: fit-content;
   max-width: 800px;
   font-weight: lighter;
   line-height: 36px;
+
+
 `

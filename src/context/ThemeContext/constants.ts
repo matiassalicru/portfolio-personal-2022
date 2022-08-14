@@ -1,10 +1,10 @@
 // DARK THEME
 
+export const DARK = 'DARK'
 export const DARK_COLOR = '#eeeeee'
 export const DARK_ACCENT_COLOR = '#ff6620'
 export const DARK_BACKGROUND_COLOR = '#24272b'
 export const DARK_BACKGROUND_SECONDARY_COLOR = '#222222'
-export const DARK = 'DARK'
 
 export const DARK_THEME = {
   theme: DARK,
