@@ -7,6 +7,14 @@ export const SCContainer = styled.section`
   align-items: center;
   height: 95vh;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    font-size: 12px;
+    height: fit-content;
+    gap: 0;
+  }
+
 `
 
 export const SCHighlightText = styled.span`
@@ -26,6 +34,13 @@ export const SCText = styled.p`
   max-width: 700px;
   line-height: 1.5;
   margin: 20px 0;
+
+  @media (max-width: 768px) {
+    width: 70%;
+    font-size: 18px;
+    height: fit-content;
+  }
+
 `
 
 export const SCUnderline = styled.div`

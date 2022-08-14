@@ -56,6 +56,8 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
     }
   }, [showAlert])
 
+  const windowWidth = window.innerWidth
+
   return (
     <SCNavContainer>
       <SCTopLeftContent>
@@ -69,31 +71,36 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
           <SCName>Matías Salicrú</SCName>
         </SCLogo>
       </SCTopLeftContent>
-      {showNavList ? (
-        <SCTopRightContent>
-          <SCNavlist>
-            <SCItem>
-              <SCLink href='#about'>About</SCLink>
-            </SCItem>
-            <SCItem>
-              <SCLink onClick={onNotAvailable} href='#blog'>
-                Blog
-              </SCLink>
-              <SCSoon>Soon</SCSoon>
-            </SCItem>
-            <SCItem>
-              <SCLink href='#experience'>Experience</SCLink>
-            </SCItem>
-            <SCItem>
-              <SCLink href='#contact'>Contact</SCLink>
-            </SCItem>
-          </SCNavlist>
-        </SCTopRightContent>
-      ) : (
-        <SCButtonContainer>
-          <LinkButton>Back to home</LinkButton>
-        </SCButtonContainer>
+      {windowWidth > 768 && (
+        <>
+          {showNavList ? (
+            <SCTopRightContent>
+              <SCNavlist>
+                <SCItem>
+                  <SCLink href='#about'>About</SCLink>
+                </SCItem>
+                <SCItem>
+                  <SCLink onClick={onNotAvailable} href='#blog'>
+                    Blog
+                  </SCLink>
+                  <SCSoon>Soon</SCSoon>
+                </SCItem>
+                <SCItem>
+                  <SCLink href='#experience'>Experience</SCLink>
+                </SCItem>
+                <SCItem>
+                  <SCLink href='#contact'>Contact</SCLink>
+                </SCItem>
+              </SCNavlist>
+            </SCTopRightContent>
+          ) : (
+            <SCButtonContainer>
+              <LinkButton>Back to home</LinkButton>
+            </SCButtonContainer>
+          )}
+        </>
       )}
+
       {showAlert && (
         <Alert
           type='warn'

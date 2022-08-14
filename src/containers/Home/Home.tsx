@@ -18,7 +18,11 @@ import {
   SCThemeButton,
   SCFixedButtons,
 } from './styles'
+
+// Context
 import { ThemeContext } from '../../context/ThemeContext/Context'
+
+// Icons
 import { faMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons'
 
 export const Home = () => {
@@ -30,6 +34,8 @@ export const Home = () => {
       setShowAlert(false)
     }, 2500)
   }, [])
+
+  const windowWidth = window.innerWidth
 
   return (
     <SCContainer>

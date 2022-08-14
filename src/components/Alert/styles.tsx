@@ -65,6 +65,12 @@ export const SCContainer = styled.div<SCContainerTypes>`
         left: 30px;
         letter-spacing: 1.5px;
         box-shadow: ${({ theme }) => theme.accentColor} 0px 2px 10px 0px;
+
+        @media (max-width: 768px) {
+          padding: 12px 30px;
+          letter-spacing: 1;
+          font-size: 10px;
+        }
       `
     )
   }}

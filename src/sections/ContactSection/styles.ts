@@ -22,6 +22,11 @@ export const SCText = styled.p`
   height: 100px;
   font-family: 'Poiret One', cursive;
   max-width: 700px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 1.5;
+  }
 `
 
 export const SCUnderline = styled.div`
@@ -58,6 +63,13 @@ export const SCEmail = styled.a`
     color: hsl(0, 0%, 100%);
     box-shadow: orange 0px 7px 40px 0px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 1.5;
+    pointer-events: none;
+  }
+
 `
 export const SCLink = styled.a`
   text-decoration: none;
@@ -102,11 +114,16 @@ export const SCEmailSection = styled.div`
   border: 1px solid ${({ theme }) => theme.accentColor};
   padding: 15px;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    padding: 7px;
+  }
 `
 
 export const SCImg = styled.img`
   height: 10em;
   width: 10em;
+
 `
 
 export const SCSocialList = styled.ul`

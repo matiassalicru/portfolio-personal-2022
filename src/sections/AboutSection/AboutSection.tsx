@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Lottie from 'react-lottie'
 import { LinkButton } from '../../components/LinkButton/LinkButton'
 import animationData from '../../lotties/66205-coding.json'
@@ -19,6 +20,11 @@ const lottieOptions = {
 }
 
 export const AboutSection = () => {
+  const windowWidth = window.innerWidth
+
+  useEffect(() => {
+    console.log('windowWidth', windowWidth)
+  }, [windowWidth])
   return (
     <SCContainer id='about'>
       <SCTextWrapper>
@@ -35,12 +41,14 @@ export const AboutSection = () => {
         </SCText>
         <LinkButton url='/about'>More about me!</LinkButton>
       </SCTextWrapper>
-      <Lottie
-        options={lottieOptions}
-        width={450}
-        height={450}
-        isClickToPauseDisabled
-      />
+      {windowWidth >= 768 && (
+        <Lottie
+          options={lottieOptions}
+          width={450}
+          height={450}
+          isClickToPauseDisabled
+        />
+      )}
       <br />
     </SCContainer>
   )

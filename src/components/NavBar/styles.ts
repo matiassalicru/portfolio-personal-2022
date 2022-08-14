@@ -6,6 +6,11 @@ export const SCTopLeftContent = styled.div`
   top: 10px;
   padding: 10px;
   background: ${({ theme }) => theme.backgroundColor};
+
+  @media (max-width: 768px) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 `
 
 export const SCTopRightContent = styled.div`
@@ -14,6 +19,7 @@ export const SCTopRightContent = styled.div`
   top: 10px;
   padding: 10px 0;
   background: ${({ theme }) => theme.backgroundColor};
+
 `
 
 export const SCLogo = styled.span`
@@ -25,7 +31,6 @@ export const SCLogo = styled.span`
 export const SCButtonContainer = styled.div`
   display: flex;
   width: 200px;
-
 `
 
 export const SCNavContainer = styled.div`
