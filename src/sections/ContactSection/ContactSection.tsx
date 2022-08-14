@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react'
 
-// Utils
-import { PRIMARY_COLOR } from '../../utils/constants'
-
 // Styles
 import {
   SChr,
@@ -30,7 +27,6 @@ import { Alert } from '../../components/Alert/Alert'
 export const Contact = () => {
   const [showAlert, setShowAlert] = useState(false)
 
-  
   const copyToClipboard = () => {
     const el = document.querySelector('[data-id="email"]')?.textContent
     if (
@@ -50,7 +46,7 @@ export const Contact = () => {
       setTimeout(() => {
         setShowAlert(false)
       }, 2000)
-    } 
+    }
   }, [showAlert])
 
   return (
@@ -67,8 +63,8 @@ export const Contact = () => {
           </SCLink>
         </b>
       </SCText>
-      <SChr color={PRIMARY_COLOR} />
-      <SCImg src={memoHello} alt='memoji hi'/>
+      <SChr />
+      <SCImg src={memoHello} alt='memoji hi' />
       <SCText>Or you can email me at</SCText>
       <SCEmailSection>
         <SCEmail
@@ -105,7 +101,7 @@ export const Contact = () => {
           </a>
         </SCSocialItem>
       </SCSocialList>
-      {showAlert && <Alert time={2} text='Email Copied!!'/>}
+      {showAlert && <Alert time={2} text='Email Copied!!' />}
     </SCContainer>
   )
 }

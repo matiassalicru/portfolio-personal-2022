@@ -15,7 +15,7 @@ export const Title = () => {
       <SCImg src={img} />
       <SCTextWrapper>
         <SCHello>
-          HI <SCShake>👋🏼</SCShake> My name is <b>Matías</b>!
+          HI <SCShake>👋🏼</SCShake> My name is <i>Matías</i>!
         </SCHello>
         <SCTitle>
           I'm a Front end developer <br /> from Córdoba, Argentina
@@ -24,4 +24,3 @@ export const Title = () => {
     </SCTitleContainer>
   )
 }
-

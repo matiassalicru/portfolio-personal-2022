@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { PRIMARY_COLOR } from '../../utils/constants'
 
 export const SCContainer = styled.div`
   display: flex;
@@ -36,15 +35,15 @@ export const SCUnderline = styled.div`
 
 export const SChr = styled.hr`
   width: 100%;
-  border: 1px solid;
+  border: 1px solid ${({ theme }) => theme.accentColor};
   border-color: ${({ color }) => color};
   margin: 20px 0;
 `
 
 export const SCEmail = styled.a`
   text-decoration: none;
-  color: inherit;
-  background: #ffffff50;
+  color: ${({ theme }) => theme.color};
+  background: ${({ theme }) => theme.backgroundColor};
   border-radius: 10px;
   font-size: 24px;
   white-space: nowrap;
@@ -53,22 +52,22 @@ export const SCEmail = styled.a`
   transition: all .2s;
 
   &:hover {
-    border: 1px solid ${PRIMARY_COLOR};
-    letter-spacing: 2px;
-    background-color: ${PRIMARY_COLOR};
+    border: 1px solid ${({ theme }) => theme.accentColor};
+    letter-spacing: 1.5px;
+    background-color: ${({ theme }) => theme.accentColor};
     color: hsl(0, 0%, 100%);
     box-shadow: orange 0px 7px 40px 0px;
   }
 `
 export const SCLink = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: ${({ theme }) => theme.color};
   transition: all .2s;
   width: fit-content;
 
 
   &:hover ${SCUnderline} {
-    background-image: linear-gradient(120deg, #ff660050 0%, ${PRIMARY_COLOR} 80%);
+    background-image: linear-gradient(120deg, #ff660050 0%, ${({ theme }) => theme.accentColor} 80%);
   }
 `
 
@@ -76,18 +75,18 @@ export const SCCopyButton = styled.button`
   padding: 10px;
   margin-left: 10px;
   background: none;
-  border: 1px solid #fff;
+  border: 1px solid ${({ theme }) => theme.color};
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: ${({ theme }) => theme.color};
   transition: all .1s;
   font-family: 'montserrat', sans-serif;
   font-weight: 700;
 
   &:hover {
-    border: 1px solid ${PRIMARY_COLOR};
+    border: 1px solid ${({ theme }) => theme.accentColor};
     letter-spacing: 3px;
-    background-color: ${PRIMARY_COLOR};
+    background-color: ${({ theme }) => theme.accentColor};
     color: hsl(0, 0%, 100%);
     box-shadow: orange 0px 7px 40px 0px;
   }
@@ -100,7 +99,7 @@ export const SCCopyButton = styled.button`
 export const SCEmailSection = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid ${PRIMARY_COLOR};
+  border: 1px solid ${({ theme }) => theme.accentColor};
   padding: 15px;
   border-radius: 10px;
 `
@@ -136,6 +135,6 @@ export const SCImgSocial = styled.img`
   transition: filter .2s;
 
   &:hover {
-    filter: drop-shadow(5px 5px 5px ${PRIMARY_COLOR});
+    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.accentColor});
   }
 `

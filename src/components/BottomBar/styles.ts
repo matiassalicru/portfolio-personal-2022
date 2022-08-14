@@ -1,13 +1,11 @@
 import styled from 'styled-components'
-import { SECONDARY_COLOR } from '../../utils/constants'
 
 export const SCContainer = styled.div`
   display: flex;
   justify-content: space-around;
   height: 50px;
-  background-color: ${SECONDARY_COLOR};
+  background-color: ${({ theme }) => theme.backgroundColor};
   opacity: .9;
-  font-family: 'Poiret One', cursive;
   font-weight: 800;
   align-items: center;
 `

@@ -1,12 +1,9 @@
-import styled, { keyframes } from 'styled-components'
-
-// Utils
-import { PRIMARY_COLOR } from '../../utils/constants'
+import styled, { css, keyframes } from 'styled-components'
 
 interface SCContainerTypes {
+  type?: string
   animationTime?: number
 }
-
 
 const insideOut = keyframes`
   0%{
@@ -43,21 +40,32 @@ const insideOut = keyframes`
   }
 `
 
-
-
 export const SCContainer = styled.div<SCContainerTypes>`
   padding: 17px 40px;
   border-radius: 10px;
   border: 0;
   background-color: white;
-  box-shadow: ${PRIMARY_COLOR} 0px 7px 40px 0px;
-  color: hsl(0, 0%, 100%);
-  background-color: ${PRIMARY_COLOR};
+  box-shadow: ${({ theme }) => theme.accentColor} 0px 7px 40px 0px;
+  color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.accentColor};
   text-transform: uppercase;
   font-size: 15px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   position: fixed;
   letter-spacing: 3px;
   z-index: 2;
-  animation: ${insideOut} ${({animationTime}) => `${animationTime}s`} ease-in-out normal;
+  animation: ${insideOut} ${({ animationTime }) => `${animationTime}s`}
+    ease-in-out normal;
+
+  ${({ type }) => {
+    return (
+      type === 'warn' &&
+      css`
+        background-color: ${({ theme }) => theme.backgroundSecondaryColor};
+        left: 30px;
+        letter-spacing: 1.5px;
+        box-shadow: ${({ theme }) => theme.accentColor} 0px 2px 10px 0px;
+      `
+    )
+  }}
 `

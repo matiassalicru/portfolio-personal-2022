@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SChr = styled.hr`
   width: 80%;
   border: 1px solid;
-  border-color: #333333;
+  border-color: ${({ theme }) => theme.accentColor};
 `
 
 export const SCContainer = styled.div`
@@ -14,13 +14,14 @@ export const SCContainer = styled.div`
   height: 800px;
   margin: 100px 0;
   width: 100%;
-  background-color: #222222;
+  background-color: ${({ theme }) => theme.backgroundSecondaryColor};
 `
 
 export const SCTitle = styled.h1`
-margin: 0;
-font-size: 40px;
-font-family: 'Poiret One', cursive;
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 `
 
 export const SCBoxContainer = styled.div`

@@ -1,8 +1,9 @@
-
 // Styles
 import {
-  SCButtonContainer,
   SCNavContainer,
+  SCTopLeftContent,
+  SCTopRightContent,
+  SCButtonContainer,
   SCNavlist,
   SCLink,
   SCItem,
@@ -15,11 +16,11 @@ import {
 import Lottie from 'react-lottie'
 import { useNavigate } from 'react-router-dom'
 import { LinkButton } from '../LinkButton/LinkButton'
-import Swal from 'sweetalert2/dist/sweetalert2.all.js'
-import withReactContent from 'sweetalert2-react-content'
 
 // Data
 import animationData from '../../lotties/72422-code.json'
+import { Alert } from '../Alert/Alert'
+import { useEffect, useState } from 'react'
 
 interface NavBarTypes {
   showNavList?: boolean
@@ -36,24 +37,10 @@ const lottieOptions = {
 
 export const NavBar = ({ showNavList = true }: NavBarTypes) => {
   const navigate = useNavigate()
-  const SwalModal = withReactContent(Swal)
+  const [showAlert, setShowAlert] = useState(false)
 
   const onNotAvailable = () => {
-    SwalModal.fire({
-      timer: 3000,
-      title: 'This section is not available yet',
-      width: 380,
-      icon: 'warning',
-      customClass: 'sweetalert',
-      position: 'bottom-end',
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      },
-      toast: true,
-      showConfirmButton: false,
-    })
+    setShowAlert((prev) => !prev)
   }
 
   const scrollToTop = () => {
@@ -61,39 +48,58 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
     navigate('/')
   }
 
+  useEffect(() => {
+    if (showAlert) {
+      setTimeout(() => {
+        setShowAlert(false)
+      }, 2500)
+    }
+  }, [showAlert])
+
   return (
     <SCNavContainer>
-      <SCLogo onClick={scrollToTop}>
-        <Lottie
-          options={lottieOptions}
-          height={30}
-          width={50}
-          isClickToPauseDisabled
-        />
-        <SCName>Matías Salicrú</SCName>
-      </SCLogo>
+      <SCTopLeftContent>
+        <SCLogo onClick={scrollToTop}>
+          <Lottie
+            options={lottieOptions}
+            height={30}
+            width={50}
+            isClickToPauseDisabled
+          />
+          <SCName>Matías Salicrú</SCName>
+        </SCLogo>
+      </SCTopLeftContent>
       {showNavList ? (
-        <SCNavlist>
-          <SCItem>
-            <SCLink href='#about'>About</SCLink>
-          </SCItem>
-          <SCItem>
-            <SCLink onClick={onNotAvailable} href='#blog'>
-              Blog
-            </SCLink>
-            <SCSoon>Soon</SCSoon>
-          </SCItem>
-          <SCItem>
-            <SCLink href='#experience'>Experience</SCLink>
-          </SCItem>
-          <SCItem>
-            <SCLink href='#contact'>Contact</SCLink>
-          </SCItem>
-        </SCNavlist>
+        <SCTopRightContent>
+          <SCNavlist>
+            <SCItem>
+              <SCLink href='#about'>About</SCLink>
+            </SCItem>
+            <SCItem>
+              <SCLink onClick={onNotAvailable} href='#blog'>
+                Blog
+              </SCLink>
+              <SCSoon>Soon</SCSoon>
+            </SCItem>
+            <SCItem>
+              <SCLink href='#experience'>Experience</SCLink>
+            </SCItem>
+            <SCItem>
+              <SCLink href='#contact'>Contact</SCLink>
+            </SCItem>
+          </SCNavlist>
+        </SCTopRightContent>
       ) : (
-        <SCButtonContainer> 
+        <SCButtonContainer>
           <LinkButton>Back to home</LinkButton>
         </SCButtonContainer>
+      )}
+      {showAlert && (
+        <Alert
+          type='warn'
+          time={2.5}
+          text='This section is not available yet'
+        />
       )}
     </SCNavContainer>
   )

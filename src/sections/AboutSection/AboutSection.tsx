@@ -1,7 +1,13 @@
 import Lottie from 'react-lottie'
 import { LinkButton } from '../../components/LinkButton/LinkButton'
 import animationData from '../../lotties/66205-coding.json'
-import { SCText, SCUnderline, SCContainer, SCTextWrapper } from './styles'
+import {
+  SCText,
+  SCUnderline,
+  SCContainer,
+  SCTextWrapper,
+  SCHighlightText,
+} from './styles'
 
 const lottieOptions = {
   loop: true,
@@ -13,18 +19,19 @@ const lottieOptions = {
 }
 
 export const AboutSection = () => {
-
   return (
     <SCContainer id='about'>
       <SCTextWrapper>
         <SCText>
           <SCUnderline>I do my best building </SCUnderline>
-          <b>pixel perfect, high performarce and High-Quality</b> applications and
-          websites using the peek technologies helping individuals and businesses
-          to achive their goals.
-          <b>
+          <SCHighlightText>
+            pixel perfect, high performarce and High-Quality
+          </SCHighlightText>{' '}
+          applications and websites using the peek technologies helping
+          individuals and business to achive their goals.
+          <SCHighlightText>
             <SCUnderline>Enjoying the journey.</SCUnderline>
-          </b>
+          </SCHighlightText>
         </SCText>
         <LinkButton url='/about'>More about me!</LinkButton>
       </SCTextWrapper>
@@ -34,7 +41,7 @@ export const AboutSection = () => {
         height={450}
         isClickToPauseDisabled
       />
-      <br/>
+      <br />
     </SCContainer>
   )
 }
