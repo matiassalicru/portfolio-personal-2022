@@ -1,0 +1,33 @@
+{
+  "home": {
+    "portfolio": "PORTFOLIO",
+    "subtitle1": "UI/UX Designer",
+    "subtitle2": "Graphic Designer"
+  },
+  "about": {
+    "title": "About me",
+    "text": "INGLé consectetur quis tempor ad consequat. Cillum proident aliqua sint ipsum non est ut sunt ex anim aute et pariatur. Occaecat laborum nisi culpa officia culpa et elit. Exercitation do in laborum irure exercitation excepteur consectetur reprehenderit elit in. Et aliquip occaecat esse consectetur ex ipsum proident magna ea ad proident. Labore incididunt exercitation ullamco quis veniam elit dolore nulla proident eu culpa labore. In ad incididunt in ex eu est incididunt sint ipsum incididunt et duis. Ullamco ex Lorem id officia commodo do mollit. Magna quis anim cupidatat ut consectetur excepteur laboris et duis adipisicing est elit. Adipisicing nulla eiusmod et velit ut id sunt nisi reprehenderit ullamco commodo. Sint aute officia reprehenderit dolore reprehenderit excepteur duis reprehenderit exercitation."
+  },
+  "skills": {
+    "title": "Skills",
+    "figma": "Figma",
+    "procreate": "ProCreate",
+    "video_editing": "Video editing",
+    "code": "HTML/CSS",
+    "communication": "Communication skills",
+    "g_suite": "G-Suite"
+  },
+  "exp": {
+    "title": "Experience",
+    "not_found": "Exp Not Found",
+    "text_1": "ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit.",
+    "text_2": "ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit."
+  },
+  "contact": {
+    "title": "Contact me",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "twitter": "Twitter",
+    "behance": "Behance"
+  }
+}
