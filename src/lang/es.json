@@ -35,10 +35,10 @@
     "alert": "Esta sección aún no está disponible."
   },
   "contact": {
-    "title": "Contáctame",
-    "linkedin": "LinkedIn",
-    "email": "Email",
-    "twitter": "Twitter",
-    "behance": "Behance"
+  "title": "Contáctame!",
+  "subtitle": "Sólo envíame un DM en",
+  "email": "También puedes enviarme un email a",
+  "copy": "Copiar",
+  "alert": "Email Copiado!"
   }
 }

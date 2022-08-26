@@ -17,24 +17,22 @@ import {
 } from './styles'
 
 // Assets
-import copy from '../../lotties/copy.svg'
 import memoHello from '../../lotties/memoji2.svg'
 import github from '../../lotties/github.png'
 import linkedIn from '../../lotties/linkedin.png'
 import twitter from '../../lotties/twitter.png'
 import { Alert } from '../../components/Alert/Alert'
 
+// Translations
+import { useTranslation } from 'react-i18next'
+
 export const Contact = () => {
   const [showAlert, setShowAlert] = useState(false)
+  const { t } = useTranslation('contact')
 
   const copyToClipboard = () => {
     const el = document.querySelector('[data-id="email"]')?.textContent
-    if (
-      navigator &&
-      navigator.clipboard &&
-      navigator.clipboard.writeText &&
-      el
-    ) {
+    if (navigator?.clipboard?.writeText && el) {
       setShowAlert(true)
       return navigator?.clipboard?.writeText(el)
     }
@@ -52,9 +50,9 @@ export const Contact = () => {
   return (
     <SCContainer id='contact'>
       <SCText>
-        Contact me!
+        {t('title')}
         <b>
-          Just send me a DM in{' '}
+          {t('subtitle')}
           <SCLink
             href='https://www.linkedin.com/in/matias-salicru/'
             target='blank'
@@ -65,7 +63,7 @@ export const Contact = () => {
       </SCText>
       <SChr />
       <SCImg src={memoHello} alt='memoji hi' />
-      <SCText>Or you can email me at</SCText>
+      <SCText>{t('email')}</SCText>
       <SCEmailSection>
         <SCEmail
           href='mailto:mattiassalicru@gmail.com'
@@ -73,7 +71,7 @@ export const Contact = () => {
           data-id='email'>
           mattiassalicru@gmail.com
         </SCEmail>
-        <SCCopyButton onClick={copyToClipboard}>Copy</SCCopyButton>
+        <SCCopyButton onClick={copyToClipboard}>{t('copy')}</SCCopyButton>
       </SCEmailSection>
       <SCSocialList>
         <SCSocialItem>
@@ -101,7 +99,7 @@ export const Contact = () => {
           </a>
         </SCSocialItem>
       </SCSocialList>
-      {showAlert && <Alert time={2} text='Email Copied!!' />}
+      {showAlert && <Alert time={2} text={t('alert')} />}
     </SCContainer>
   )
 }
