@@ -11,12 +11,17 @@
     "hi": "Hola",
     "presentation": "Me llamo ",
     "subtitle1": "Soy desarrollador Front-end",
-    "subtitle2": "con +1 años de experiencia.",
+    "subtitle2": "con +1 año de experiencia.",
     "subtitle3": "Córdoba, Argentina 🇦🇷"
   },
   "about": {
-    "title": "Acerca de mí",
-    "text": "Españó consectetur quis tempor ad consequat. Cillum proident aliqua sint ipsum non est ut sunt ex anim aute et pariatur. Occaecat laborum nisi culpa officia culpa et elit. Exercitation do in laborum irure exercitation excepteur consectetur reprehenderit elit in. Et aliquip occaecat esse consectetur ex ipsum proident magna ea ad proident. Labore incididunt exercitation ullamco quis veniam elit dolore nulla proident eu culpa labore. In ad incididunt in ex eu est incididunt sint ipsum incididunt et duis. Ullamco ex Lorem id officia commodo do mollit. Magna quis anim cupidatat ut consectetur excepteur laboris et duis adipisicing est elit. Adipisicing nulla eiusmod et velit ut id sunt nisi reprehenderit ullamco commodo. Sint aute officia reprehenderit dolore reprehenderit excepteur duis reprehenderit exercitation."
+    "underlined1": "Me encanta construir",
+    "highlighted1": "aplicaciones y sitios web ultra optimizados y escalables.",
+    "text": "Con +1 año de experiencia en startups he ayudado a empresas y personas a cumplir sus objetivos profesionales.",
+    "underlined2": "Viaje antes que destino.",
+    "button": "Que me motiva",
+    "about-text": "Me llamo Matías Salicrú y soy de Córdoba, Argentina. Soy un dev front-end que le encanta la tecnología, siempre estoy atento a las ultimas noticias sobre nuevo hardware, me encantan los videojuegos, y tengo una mentalidad de nunca parar de aprender así que en todo momento estoy haciendo cursos (actualmente estoy aprendiendo mucho sobre web3 y desarrollo blockchain ⛓) Y me encanta ver videos en YouTube. Me gusta mucho leer (conoces a Brandon Sanderson? 👀). También tengo una gata llamada Sam 🐈 quien está casi siempre atrás mio queriendo aparecer en cámara.",
+    "about-alert": "Un poco de mí! :D"
   },
   "skills": {
     "title": "Habilidades",
