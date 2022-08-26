@@ -1,4 +1,12 @@
 {
+  "navbar": {
+    "about": "Acerca de mí",
+    "blog": "Blog",
+    "soon": "Pronto",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "backHome": "Volver al inicio"
+  },
   "home": {
     "hi": "Hola",
     "presentation": "My name is <i>Matías</i>!",

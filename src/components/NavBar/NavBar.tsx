@@ -1,3 +1,7 @@
+import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+
 // Styles
 import {
   SCNavContainer,
@@ -14,13 +18,12 @@ import {
 
 // Components
 import Lottie from 'react-lottie'
-import { useNavigate } from 'react-router-dom'
 import { LinkButton } from '../LinkButton/LinkButton'
 
 // Data
 import animationData from '../../lotties/72422-code.json'
 import { Alert } from '../Alert/Alert'
-import { useEffect, useState } from 'react'
+
 
 interface NavBarTypes {
   showNavList?: boolean
@@ -37,7 +40,9 @@ const lottieOptions = {
 
 export const NavBar = ({ showNavList = true }: NavBarTypes) => {
   const navigate = useNavigate()
+  const { t } = useTranslation('navbar')
   const [showAlert, setShowAlert] = useState(false)
+
 
   const onNotAvailable = () => {
     setShowAlert((prev) => !prev)
@@ -77,25 +82,25 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
             <SCTopRightContent>
               <SCNavlist>
                 <SCItem>
-                  <SCLink href='#about'>About</SCLink>
+                  <SCLink href='#about'>{t('about')}</SCLink>
                 </SCItem>
                 <SCItem>
                   <SCLink onClick={onNotAvailable} href='#blog'>
-                    Blog
+                    {t('blog')}
                   </SCLink>
-                  <SCSoon>Soon</SCSoon>
+                  <SCSoon>{t('soon')}</SCSoon>
                 </SCItem>
                 <SCItem>
-                  <SCLink href='#experience'>Experience</SCLink>
+                  <SCLink href='#experience'>{t('experience')}</SCLink>
                 </SCItem>
                 <SCItem>
-                  <SCLink href='#contact'>Contact</SCLink>
+                  <SCLink href='#contact'>{t('contact')}</SCLink>
                 </SCItem>
               </SCNavlist>
             </SCTopRightContent>
           ) : (
             <SCButtonContainer>
-              <LinkButton>Back to home</LinkButton>
+              <LinkButton>{t('backHome')}</LinkButton>
             </SCButtonContainer>
           )}
         </>

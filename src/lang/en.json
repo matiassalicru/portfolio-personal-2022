@@ -1,4 +1,12 @@
 {
+  "navbar": {
+    "about": "About",
+    "blog": "Blog",
+    "soon": "Soon",
+    "experience": "Experience",
+    "contact": "Contact",
+    "backHome": "Back to home"
+  },
   "home": {
     "portfolio": "PORTFOLIO",
     "subtitle1": "UI/UX Designer",

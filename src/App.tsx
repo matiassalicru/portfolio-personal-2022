@@ -1,5 +1,5 @@
 // Libraries
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Components
@@ -25,15 +25,20 @@ import {
   faGlobeAmericas,
   faMoon,
 } from '@fortawesome/free-solid-svg-icons'
+
+// Translations
 import { useTranslation } from 'react-i18next'
 
 export const App = () => {
   const { theme, changeTheme } = useContext(ThemeContext)
+  
   const { i18n } = useTranslation()
-
+  
   const changeLanguage = () => {
+    console.log("🚀 ~ changeLanguage ~ i18n.language", i18n.language)
     i18n.changeLanguage(i18n.language === ENG_LANG ? ESP_LANG : ENG_LANG)
   }
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalCSS />
