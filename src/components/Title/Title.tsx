@@ -30,7 +30,6 @@ export const Title = () => {
           <SCSubtitle>
             {t("subtitle3")}
           </SCSubtitle>
-          {/* I'm a Front end developer <br /> from Córdoba, Argentina */}
         </SCTitle>
       </SCTextWrapper>
     </SCTitleContainer>

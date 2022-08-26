@@ -25,11 +25,10 @@ export const SCTitle = styled.h2`
   flex-direction: column;
   padding: 10px 0;
   font-size: 2em;
-  font-weight: 200;
   align-items: center;
   justify-content: center;
-  font-family: 'Poiret One', cursive;
-  font-weight: bolder;
+  /* font-family: 'Poiret One', cursive; */
+  font-weight: 400;
 
 
   @media (max-width: 768px) {
