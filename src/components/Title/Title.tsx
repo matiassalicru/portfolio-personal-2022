@@ -1,3 +1,4 @@
+// Styles
 import {
   SCHello,
   SCTitle,
@@ -5,20 +6,31 @@ import {
   SCShake,
   SCTextWrapper,
   SCImg,
+  SCSubtitle,
 } from './styles'
 
+// Assets
 import img from '../../lotties/memoji.png'
 
+// Lang
+import { useTranslation } from 'react-i18next'
+
 export const Title = () => {
+  const { t } = useTranslation('home')
   return (
     <SCTitleContainer id='home'>
       <SCImg src={img} />
       <SCTextWrapper>
         <SCHello>
-          HI <SCShake>👋🏼</SCShake> My name is <i>Matías</i>!
+          {t("hi")} <SCShake>👋🏼</SCShake> {t('presentation')} <i>Matías!</i>
         </SCHello>
         <SCTitle>
-          I'm a Front end developer <br /> from Córdoba, Argentina
+          {t("subtitle1")} <br/>
+          {t("subtitle2")} <br/>
+          <SCSubtitle>
+            {t("subtitle3")}
+          </SCSubtitle>
+          {/* I'm a Front end developer <br /> from Córdoba, Argentina */}
         </SCTitle>
       </SCTextWrapper>
     </SCTitleContainer>

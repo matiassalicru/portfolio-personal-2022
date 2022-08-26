@@ -35,7 +35,6 @@ export const App = () => {
   const { i18n } = useTranslation()
   
   const changeLanguage = () => {
-    console.log("🚀 ~ changeLanguage ~ i18n.language", i18n.language)
     i18n.changeLanguage(i18n.language === ENG_LANG ? ESP_LANG : ENG_LANG)
   }
 

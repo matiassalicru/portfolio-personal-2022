@@ -8,9 +8,11 @@
     "backHome": "Back to home"
   },
   "home": {
-    "portfolio": "PORTFOLIO",
-    "subtitle1": "UI/UX Designer",
-    "subtitle2": "Graphic Designer"
+    "hi": "Hi",
+    "presentation": "My name is ",
+    "subtitle1": "I'm a Front-end developer",
+    "subtitle2": "with +1 year of experience.",
+    "subtitle3": "Córdoba, Argentina 🇦🇷"
   },
   "about": {
     "title": "About me",

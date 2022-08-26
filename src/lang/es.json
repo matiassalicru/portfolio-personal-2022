@@ -9,8 +9,10 @@
   },
   "home": {
     "hi": "Hola",
-    "presentation": "My name is <i>Matías</i>!",
-    "subtitle": "I'm a Front end developer from Córdoba, Argentina"
+    "presentation": "Me llamo ",
+    "subtitle1": "Soy desarrollador Front-end",
+    "subtitle2": "con +1 años de experiencia.",
+    "subtitle3": "Córdoba, Argentina 🇦🇷"
   },
   "about": {
     "title": "Acerca de mí",
