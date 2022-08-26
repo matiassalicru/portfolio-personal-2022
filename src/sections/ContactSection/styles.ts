@@ -72,14 +72,12 @@ export const SCEmail = styled.a`
 
 `
 export const SCLink = styled.a`
-  text-decoration: none;
+  text-decoration: underline;
   color: ${({ theme }) => theme.color};
   transition: all .2s;
   width: fit-content;
-
-
-  &:hover ${SCUnderline} {
-    background-image: linear-gradient(120deg, #ff660050 0%, ${({ theme }) => theme.accentColor} 80%);
+  &:hover {
+    color: ${({ theme }) => theme.accentColor};
   }
 `
 

@@ -35,10 +35,10 @@
     "alert": "This section is not available yet."
   },
   "contact": {
-    "title": "Contact me",
-    "linkedin": "LinkedIn",
-    "email": "Email",
-    "twitter": "Twitter",
-    "behance": "Behance"
+    "title": "Contact me!",
+    "subtitle": "Just send me a DM in",
+    "email": "Or you can email me at",
+    "copy": "Copy",
+    "alert": "Email Copied!"
   }
 }
