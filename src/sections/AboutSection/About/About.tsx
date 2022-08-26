@@ -15,8 +15,12 @@ import {
 // Assets
 import meSit from '../../../lotties/sit.jpg'
 
+// Translations
+import { useTranslation } from 'react-i18next'
+
 export const About = () => {
   const [showAlert, setShowAlert] = useState(true)
+  const { t } = useTranslation(['about', 'home'])
 
   useEffect(() => {
     setTimeout(() => {
@@ -28,26 +32,12 @@ export const About = () => {
       <NavBar showNavList={false} />
       <SCAboutContainer>
         <SCTextWrapper>
-          <SCTitle>Hola!</SCTitle>
+          <SCTitle>{t('home:hi')}</SCTitle>
           <SCParagraph>
-            My name is Matias and I'm from Córdoba, Argentina, I'm a frontend
-            developer who is passioned about technology, I'm always curious
-            about the lastest tech thing including smartphones, videogames, PC
-            hardware, etc. I have a mindset of never stop learning so I'm always
-            doing some courses (actually learning web3 - blockchain develoment
-            ⛓). I like reading, and I have a Cat named Sam 🐈 (she's almost
-            always on camera behind me).
-            <hr />
-            Hola! Soy desarrollador front-end, estudiante de internet y
-            apasionado por la tecnología, tengo experiencia trabajando en
-            equipos de producto, más de 2 años de experiencia trabajando en
-            aplicaciones SaaS, utilizando distintas tecnologías de front-end y
-            últimamente estoy formandome como desarrollador web3, con
-            tecnologías relacionadas con blockchain y solidity. También tengo
-            una gata llamada Sam que aparece mucho en las meetings 😹
+            {t("about:about-text")}
           </SCParagraph>
         </SCTextWrapper>
-        {showAlert && <Alert time={1.5} text='This is me! :D' />}
+        {showAlert && <Alert time={1.5} text={t("about:about-alert")}/>}
         <SCImg src={meSit} />
       </SCAboutContainer>
     </>

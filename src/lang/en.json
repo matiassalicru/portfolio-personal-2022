@@ -15,8 +15,13 @@
     "subtitle3": "Córdoba, Argentina 🇦🇷"
   },
   "about": {
-    "title": "About me",
-    "text": "INGLé consectetur quis tempor ad consequat. Cillum proident aliqua sint ipsum non est ut sunt ex anim aute et pariatur. Occaecat laborum nisi culpa officia culpa et elit. Exercitation do in laborum irure exercitation excepteur consectetur reprehenderit elit in. Et aliquip occaecat esse consectetur ex ipsum proident magna ea ad proident. Labore incididunt exercitation ullamco quis veniam elit dolore nulla proident eu culpa labore. In ad incididunt in ex eu est incididunt sint ipsum incididunt et duis. Ullamco ex Lorem id officia commodo do mollit. Magna quis anim cupidatat ut consectetur excepteur laboris et duis adipisicing est elit. Adipisicing nulla eiusmod et velit ut id sunt nisi reprehenderit ullamco commodo. Sint aute officia reprehenderit dolore reprehenderit excepteur duis reprehenderit exercitation."
+    "underlined1": "I love building",
+    "highlighted1": "pixel perfect, high performarce and High-Quality",
+    "text": "applications and websites. With +1 year of experience in startups I've helped individuals and business to achive their goals.",
+    "underlined2": "Journey before destination.",
+    "button": "What motivates me",
+    "about-text": "My name is Matias and I'm from Córdoba, Argentina, I'm a frontend developer who is passioned about technology, I'm always curious about the lastest tech thing including smartphones, videogames, PC hardware, etc. I have a mindset of never stop learning so I'm always doing some courses (actually learning web3 and blockchain develoment ⛓) and I love watching youtube videos. I like reading (Do you know Brandon Sanderson? 👀), and I have a Cat named Sam 🐈 (she's almost always on camera behind me).",
+    "about-alert": "This is me! :D"
   },
   "skills": {
     "title": "Skills",

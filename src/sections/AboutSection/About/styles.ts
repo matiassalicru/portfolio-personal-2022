@@ -8,8 +8,6 @@ export const SCAboutContainer = styled.div`
   gap: 50px;
   background: ${({ theme }) => theme.backgroundColor};
   min-height: 100vh;
-  padding: 100px 0;
-
 `
 
 export const SCTextWrapper = styled.div`

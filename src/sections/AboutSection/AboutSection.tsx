@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
-import Lottie from 'react-lottie'
+// Components
 import { LinkButton } from '../../components/LinkButton/LinkButton'
-import animationData from '../../lotties/66205-coding.json'
+
+// Styles
 import {
   SCText,
   SCUnderline,
@@ -10,6 +10,12 @@ import {
   SCHighlightText,
 } from './styles'
 
+// Translations
+import { useTranslation } from 'react-i18next'
+
+// Assets
+import Lottie from 'react-lottie'
+import animationData from '../../lotties/66205-coding.json'
 const lottieOptions = {
   loop: true,
   autoplay: true,
@@ -20,26 +26,21 @@ const lottieOptions = {
 }
 
 export const AboutSection = () => {
+  const { t } = useTranslation('about')
   const windowWidth = window.innerWidth
 
-  useEffect(() => {
-    console.log('windowWidth', windowWidth)
-  }, [windowWidth])
   return (
     <SCContainer id='about'>
       <SCTextWrapper>
         <SCText>
-          <SCUnderline>I do my best building </SCUnderline>
+          <SCUnderline>{t('underlined1')} </SCUnderline>
+          <SCHighlightText>{t('highlighted1')}</SCHighlightText> 
+          {t('text')}
           <SCHighlightText>
-            pixel perfect, high performarce and High-Quality
-          </SCHighlightText>{' '}
-          applications and websites using the peek technologies helping
-          individuals and business to achive their goals.
-          <SCHighlightText>
-            <SCUnderline>Enjoying the journey.</SCUnderline>
+            <SCUnderline> {t('underlined2')}</SCUnderline>
           </SCHighlightText>
         </SCText>
-        <LinkButton url='/about'>More about me!</LinkButton>
+        <LinkButton url='/about'>{t('button')}</LinkButton>
       </SCTextWrapper>
       {windowWidth >= 768 && (
         <Lottie
