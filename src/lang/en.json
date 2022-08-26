@@ -23,20 +23,16 @@
     "about-text": "My name is Matias and I'm from Córdoba, Argentina, I'm a frontend developer who is passioned about technology, I'm always curious about the lastest tech thing including smartphones, videogames, PC hardware, etc. I have a mindset of never stop learning so I'm always doing some courses (actually learning web3 and blockchain develoment ⛓) and I love watching youtube videos. I like reading (Do you know Brandon Sanderson? 👀), and I have a Cat named Sam 🐈 (she's almost always on camera behind me).",
     "about-alert": "This is me! :D"
   },
-  "skills": {
-    "title": "Skills",
-    "figma": "Figma",
-    "procreate": "ProCreate",
-    "video_editing": "Video editing",
-    "code": "HTML/CSS",
-    "communication": "Communication skills",
-    "g_suite": "G-Suite"
-  },
-  "exp": {
+  "experience": {
     "title": "Experience",
-    "not_found": "Exp Not Found",
-    "text_1": "ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit.",
-    "text_2": "ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ENGLISH Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit."
+    "freelanceText": "As a freelance I worked with clients, where I had to discuss the project details, I talked about development, technologies, deployment tools, domains, etc. These experiences help me to get into the development enviroment, and then I knew that my passion is in the Frontend development.",
+    "freelanceRole": "Fullstack and more",
+    "corText": "At COR Global Ltd. As a Frontend developer I had the opportunity to work with a P. Manager, P. Owner, P. Designer, QA tester, Functional Analyst and also a Backend team with whom we were in constant communication. At COR I worked with Scrum, and technologies as React, TypeScript, Jest for testing, MicroFrontends.",
+    "corRole": "Front-end Developer",
+    "brainitText": "I worked at BrainIt as a part-time FullStack developer with a small but great team, with a product that were not released yet, since my short time in BrainIT the product was changing and has a lot of changes in were we need to adapt,  moreover we were constantly looking for new technologies and innovation bringing ideas to the owner.",
+    "brainitRole": "Fullstack Developer",
+    "projectsButton": "Check my personal projects!",
+    "alert": "This section is not available yet."
   },
   "contact": {
     "title": "Contact me",

@@ -33,7 +33,7 @@ export const SCButtonContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   background-color: ${({ theme }) => theme.backgroundColor};
-  width: 100vw;
+  width: 100%;
 `
 
 export const SCNavContainer = styled.div`

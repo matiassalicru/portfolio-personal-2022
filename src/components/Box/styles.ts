@@ -9,9 +9,9 @@ export const SCBoxContainer = styled.div`
   background-color: ${({ theme }) => theme.backgroundColor};
   padding: 20px;
   margin: 20px 20px; 
-  min-width: 230px;
+  min-width: 300px;
   max-width: 270px;
-  min-height: 280px;
+  min-height: 420px;
   box-shadow: 4px 4px 4px 4px ${({ theme }) => theme.backgroundColor};
   line-height: 24px;
   font-weight: 500;

@@ -5,8 +5,11 @@ import { Box } from '../../components/Box/Box'
 import { LinkButton } from '../../components/LinkButton/LinkButton'
 import { Alert } from '../../components/Alert/Alert'
 
+// Translations
+import { useTranslation } from 'react-i18next'
+
 // Data
-import { experiences } from './data'
+import { BRAIN_IT, COR, experiences, FREELANCE } from './data'
 
 // Styles
 import {
@@ -33,6 +36,24 @@ import reactLogo from '../../lotties/react-logo.png'
 
 export const ExperienceSection = () => {
   const [showAlert, setShowAlert] = useState(false)
+  const { t } = useTranslation('experience')
+
+  const freelanceExp = experiences.find(exp => exp === FREELANCE)
+  const corExp = experiences.find(exp => exp === COR)
+  const brainItExp = experiences.find(exp => exp === BRAIN_IT)
+
+  if(freelanceExp) {
+    freelanceExp.subtitle = t('freelanceRole')
+    freelanceExp.text = t('freelanceText')
+  }
+  if(corExp) {
+    corExp.subtitle = t('corRole')
+    corExp.text = t('corText')
+  }
+  if(brainItExp) {
+    brainItExp.subtitle = t('brainitRole')
+    brainItExp.text = t('brainitText')
+  }
 
   const onNotAvailable = () => {
     setShowAlert((prev) => !prev)
@@ -96,14 +117,14 @@ export const ExperienceSection = () => {
         </SCSkillWrapper>
       </SCSkillsContainer>
       <SCBoxContainer onClick={onNotAvailable}>
-        <LinkButton url=''>Check my personal projects!</LinkButton>
+        <LinkButton url=''>{t('projectsButton')}</LinkButton>
       </SCBoxContainer>
 
       {showAlert && (
         <Alert
           type='warn'
           time={2.5}
-          text='This section is not available yet'
+          text={t('alert')}
         />
       )}
     </SCContainer>

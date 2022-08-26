@@ -23,20 +23,16 @@
     "about-text": "Me llamo Matías Salicrú y soy de Córdoba, Argentina. Soy un dev front-end que le encanta la tecnología, siempre estoy atento a las ultimas noticias sobre nuevo hardware, me encantan los videojuegos, y tengo una mentalidad de nunca parar de aprender así que en todo momento estoy haciendo cursos (actualmente estoy aprendiendo mucho sobre web3 y desarrollo blockchain ⛓) Y me encanta ver videos en YouTube. Me gusta mucho leer (conoces a Brandon Sanderson? 👀). También tengo una gata llamada Sam 🐈 quien está casi siempre atrás mio queriendo aparecer en cámara.",
     "about-alert": "Un poco de mí! :D"
   },
-  "skills": {
-    "title": "Habilidades",
-    "figma": "Figma",
-    "procreate": "ProCreate",
-    "video_editing": "Edición de video",
-    "code": "HTML y CSS",
-    "communication": "Comunicación efectiva",
-    "g_suite": "G-Suite"
-  },
-  "exp": {
+  "experience": {
     "title": "Experiencia",
-    "not_found": "Exp no encontrada",
-    "text_1": "ESPAñol Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ESPAñol Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ESPAñol Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit.",
-    "text_2": "ESPAñol Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ESPAñol Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit. ESPAñol Dolor consequat ipsum sit eu quis ex laborum tempor amet. Incididunt commodo nisi consequat aliqua ex minim. Sint do exercitation veniam id fugiat ad velit laborum in esse consectetur commodo mollit."
+    "freelanceText": "Como freelancer trabajé con clientes donde tuvimos la oportunidad de compartir detalles del proyecto, yo compartí mis ideas acerca de desarrollo, herramientas de despliegue, dominios, etc. Estas experiencias me ayudaron a adentrarme en el ambiente del desarrollo web, y fue donde descubrí mi pasión por el frontend.",
+    "freelanceRole": "Fullstack y más.",
+    "corText": "Como Frontend developer tuve la oportunidad de trabajar con un equipo increíble, formado por P. Manager, P. Owner, P. Designer, QA, Functional Analyst y un equipo de backend con quien estábamos en comunicación constante, utilizando un método scrum, y tecnologías como React, TypeScript, Jest y Microfrontends.",
+    "corRole": "Desarrollador Front-end",
+    "brainitText": "Trabajé en BrainIt medio tiempo como desarrollador fullstack con un pequeño pero gran equipo con un producto que todavía no había sido lanzado, durante mi corto tiempo en BrainIt el producto mutó, y sufrió constantes cambios a los que hubo que adaptarse, además que estábamos en constante búsqueda de tecnologías e innovación trayendo ideas al cliente.",
+    "brainitRole": "Desarrollador Fullstack",
+    "projectsButton": "Algunos de mis projectos personales!",
+    "alert": "Esta sección aún no está disponible."
   },
   "contact": {
     "title": "Contáctame",
