@@ -26,11 +26,14 @@ export const SCLogo = styled.span`
   display: flex;
   height: fit-content;
   cursor: pointer;
+  align-items: center;
 `
 
 export const SCButtonContainer = styled.div`
   display: flex;
-  width: 200px;
+  flex-direction: row-reverse;
+  background-color: ${({ theme }) => theme.backgroundColor};
+  width: 100vw;
 `
 
 export const SCNavContainer = styled.div`

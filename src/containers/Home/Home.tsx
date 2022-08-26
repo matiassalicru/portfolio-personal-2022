@@ -1,29 +1,17 @@
 import { useContext, useEffect, useState } from 'react'
 
-// Icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 // Components
 import { Alert } from '../../components/Alert/Alert'
 import { BottomBar } from '../../components/BottomBar/BottomBar'
 import { NavBar } from '../../components/NavBar/NavBar'
 import { Title } from '../../components/Title/Title'
 import { SectionContainer } from '../../containers/SectionContainer'
-import { DARK } from '../../context/ThemeContext/constants'
 
 // Styles
-import {
-  SCContainer,
-  SCAlertContainer,
-  SCThemeButton,
-  SCFixedButtons,
-} from './styles'
+import { SCContainer, SCAlertContainer } from './styles'
 
 // Context
 import { ThemeContext } from '../../context/ThemeContext/Context'
-
-// Icons
-import { faMoon, faCloudSun } from '@fortawesome/free-solid-svg-icons'
 
 export const Home = () => {
   const [showAlert, setShowAlert] = useState(true)
@@ -39,14 +27,6 @@ export const Home = () => {
 
   return (
     <SCContainer>
-      <SCFixedButtons>
-        <SCThemeButton onClick={changeTheme} type='button'>
-          <FontAwesomeIcon
-            icon={theme?.theme === DARK ? faCloudSun : faMoon}
-            size='lg'
-          />
-        </SCThemeButton>
-      </SCFixedButtons>
       <NavBar />
       <Title />
       <SectionContainer />

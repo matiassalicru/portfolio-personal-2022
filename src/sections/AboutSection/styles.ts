@@ -33,7 +33,7 @@ export const SCText = styled.p`
   font-weight: 200;
   max-width: 700px;
   line-height: 1.5;
-  margin: 20px 0;
+  margin: 20px;
 
   @media (max-width: 768px) {
     width: 70%;
