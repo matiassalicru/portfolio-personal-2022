@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SCFixedButtons = styled.div`
+  display: flex;
   position: fixed;
   display: flex;
   flex-direction: row-reverse;

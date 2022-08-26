@@ -19,15 +19,16 @@ export const SCImg = styled.img`
   background-size: 37% 0.1em;
 `
 
-export const SCTitle = styled.p`
+export const SCTitle = styled.h2`
   margin: 0;
   display: flex;
+  flex-direction: column;
   padding: 10px 0;
-  font-size: 42px;
+  font-size: 2em;
   align-items: center;
-  justify-content: start;
-  font-family: 'Poiret One', cursive;
-  font-weight: bolder;
+  justify-content: center;
+  /* font-family: 'Poiret One', cursive; */
+  font-weight: 400;
 
 
   @media (max-width: 768px) {
@@ -75,4 +76,9 @@ export const SCShake = styled.span`
   animation: ${rotate} .2s linear infinite alternate;
   font-size: 2rem;
   padding: 0 5px;
+`
+
+export const SCSubtitle = styled.p`
+  font-size: 1em;
+  font-weight: 200
 `

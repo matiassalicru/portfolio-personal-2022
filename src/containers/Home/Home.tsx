@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // Components
 import { Alert } from '../../components/Alert/Alert'
@@ -10,20 +10,14 @@ import { SectionContainer } from '../../containers/SectionContainer'
 // Styles
 import { SCContainer, SCAlertContainer } from './styles'
 
-// Context
-import { ThemeContext } from '../../context/ThemeContext/Context'
-
 export const Home = () => {
   const [showAlert, setShowAlert] = useState(true)
-  const { theme, changeTheme } = useContext(ThemeContext)
 
   useEffect(() => {
     setTimeout(() => {
       setShowAlert(false)
     }, 2500)
   }, [])
-
-  const windowWidth = window.innerWidth
 
   return (
     <SCContainer>
