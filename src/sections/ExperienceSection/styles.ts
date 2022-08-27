@@ -23,7 +23,7 @@ export const SCTitle = styled.h1`
   font-size: 40px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-
+  margin: 10px 0;
   @media (max-width: 768px) {
     margin: 20px 0px;
   }
