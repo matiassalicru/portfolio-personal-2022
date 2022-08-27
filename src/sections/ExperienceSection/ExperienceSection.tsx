@@ -38,19 +38,19 @@ export const ExperienceSection = () => {
   const [showAlert, setShowAlert] = useState(false)
   const { t } = useTranslation('experience')
 
-  const freelanceExp = experiences.find(exp => exp === FREELANCE)
-  const corExp = experiences.find(exp => exp === COR)
-  const brainItExp = experiences.find(exp => exp === BRAIN_IT)
+  const freelanceExp = experiences.find((exp) => exp === FREELANCE)
+  const corExp = experiences.find((exp) => exp === COR)
+  const brainItExp = experiences.find((exp) => exp === BRAIN_IT)
 
-  if(freelanceExp) {
+  if (freelanceExp) {
     freelanceExp.subtitle = t('freelanceRole')
     freelanceExp.text = t('freelanceText')
   }
-  if(corExp) {
+  if (corExp) {
     corExp.subtitle = t('corRole')
     corExp.text = t('corText')
   }
-  if(brainItExp) {
+  if (brainItExp) {
     brainItExp.subtitle = t('brainitRole')
     brainItExp.text = t('brainitText')
   }
@@ -69,7 +69,7 @@ export const ExperienceSection = () => {
 
   return (
     <SCContainer id='experience'>
-      <SCTitle>Experience</SCTitle>
+      <SCTitle>{t('title')}</SCTitle>
       <SCBoxContainer>
         {!!experiences.length &&
           experiences.map(({ title, subtitle, text, image, date }, i) => (
@@ -120,13 +120,7 @@ export const ExperienceSection = () => {
         <LinkButton url=''>{t('projectsButton')}</LinkButton>
       </SCBoxContainer>
 
-      {showAlert && (
-        <Alert
-          type='warn'
-          time={2.5}
-          text={t('alert')}
-        />
-      )}
+      {showAlert && <Alert type='warn' time={2.5} text={t('alert')} />}
     </SCContainer>
   )
 }
