@@ -109,11 +109,10 @@ export const SCPrimaryButton = styled.button`
 `
 
 export const SCSoon = styled.div`
-  background: ${({ theme }) => theme.backgroundSecondaryColor};
-  border-radius: 5px;
-  font-size: 12px;
-  white-space: nowrap;
+  background: ${({ theme }) => theme.accentColor};
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
   margin-left: 7px;
   margin-top: 5px;
-  padding: 3px 4px;
 `
