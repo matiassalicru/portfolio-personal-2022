@@ -44,8 +44,13 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
   const [showAlert, setShowAlert] = useState(false)
 
 
+  // Show not available yet alert 
   const onNotAvailable = () => {
     setShowAlert((prev) => !prev)
+  }
+
+  const onGoToTheBlog = () => {
+    window.open('https://matiassalicru-blog.vercel.app')
   }
 
   const scrollToTop = () => {
@@ -85,10 +90,10 @@ export const NavBar = ({ showNavList = true }: NavBarTypes) => {
                   <SCLink href='#about'>{t('about')}</SCLink>
                 </SCItem>
                 <SCItem>
-                  <SCLink onClick={onNotAvailable} href='#blog'>
+                  <SCLink onClick={onGoToTheBlog} href='#blog'>
                     {t('blog')}
                   </SCLink>
-                  <SCSoon>{t('soon')}</SCSoon>
+                  <SCSoon />
                 </SCItem>
                 <SCItem>
                   <SCLink href='#experience'>{t('experience')}</SCLink>
