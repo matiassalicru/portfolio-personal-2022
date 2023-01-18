@@ -26,23 +26,6 @@ export const ExperienceSection = () => {
   const [showAlert, setShowAlert] = useState(false)
   const { t } = useTranslation('experience')
 
-  const freelanceExp = EXPERIENCES.find((exp) => exp === FREELANCE)
-  const corExp = EXPERIENCES.find((exp) => exp === COR)
-  const brainItExp = EXPERIENCES.find((exp) => exp === BRAIN_IT)
-
-  if (freelanceExp) {
-    freelanceExp.subtitle = t('freelanceRole')
-    freelanceExp.text = t('freelanceText')
-  }
-  if (corExp) {
-    corExp.subtitle = t('corRole')
-    corExp.text = t('corText')
-  }
-  if (brainItExp) {
-    brainItExp.subtitle = t('brainitRole')
-    brainItExp.text = t('brainitText')
-  }
-
   const onNotAvailable = () => {
     setShowAlert((prev) => !prev)
   }
@@ -64,8 +47,8 @@ export const ExperienceSection = () => {
             <Box
               key={i}
               title={title}
-              subtitle={subtitle}
-              text={text}
+              subtitle={t(subtitle)}
+              text={t(text)}
               image={image}
               date={date}
             />

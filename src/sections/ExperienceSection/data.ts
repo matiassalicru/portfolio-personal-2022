@@ -19,23 +19,23 @@ export const TECHNOLOGIES = [js, html, css, git, docker, github, styled, typescr
 
 export const COR = {
   title: 'COR Global Ltd',
-  subtitle: '',
-  text: '',
+  subtitle: 'corRole',
+  text: 'corText',
   image: CORLogo,
   date: 'Jul 2021 - Present'
 }
 export const BRAIN_IT = {
   title: 'Brain IT',
-  subtitle: '',
-  text: '',
+  subtitle: 'brainitRole',
+  text: 'brainitText',
   image: BrainITLogo,
   date: 'Jul 2021 - Sep 2021'
 }
 
 export const FREELANCE = {
   title: 'Freelance',
-  subtitle: '',
-  text: '',
+  subtitle: 'freelanceRole',
+  text: 'freelanceText',
   image: FreelanceLogo,
   date: 'Jul 2020 - Jul 2021'
 }
