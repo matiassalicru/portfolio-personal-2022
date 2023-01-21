@@ -24,6 +24,7 @@
     "about-alert": "This is me! :D"
   },
   "experience": {
+    "projects": "Recent projects",
     "title": "Experience",
     "freelanceText": "As a freelance I worked with clients, where I had to discuss the project details, I talked about development, technologies, deployment tools, domains, etc. These experiences help me to get into the development enviroment, and then I knew that my passion is in the Frontend development.",
     "freelanceRole": "Fullstack and more",

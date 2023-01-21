@@ -1,7 +1,7 @@
 // Components
 import { useEffect, useState } from 'react'
-import { Alert } from '../../../components/Alert/Alert'
-import { NavBar } from '../../../components/NavBar/NavBar'
+import { Alert } from '../../components/Alert/Alert'
+import { NavBar } from '../../components/NavBar/NavBar'
 
 // Styles
 import {
@@ -13,12 +13,12 @@ import {
 } from './styles'
 
 // Assets
-import meSit from '../../../lotties/sit.jpg'
+import meSit from '../../lotties/sit.jpg'
 
 // Translations
 import { useTranslation } from 'react-i18next'
 
-export const About = () => {
+export const AboutContainer = () => {
   const [showAlert, setShowAlert] = useState(true)
   const { t } = useTranslation(['about', 'home'])
 

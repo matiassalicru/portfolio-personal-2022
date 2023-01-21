@@ -15,7 +15,12 @@ import typescript from '../../lotties/typescript.png'
 import jest from '../../lotties/jest.png'
 import reactLogo from '../../lotties/react-logo.png'
 
+import cover8 from '../../lotties/cover8.png'
+import cover9 from '../../lotties/cover9.png'
+import cover10 from '../../lotties/cover10.png'
+
 export const TECHNOLOGIES = [js, html, css, git, docker, github, styled, typescript, jest, reactLogo]
+export const PROJECTS = [{ title: 'Blog', image: cover9, url: 'https://matiassalicru-blog.vercel.app/' }, { title: 'Portfolio', image: cover10, url: 'https://matiassalicru.vercel.app/' }, { title: '', image: cover8, url: 'https://github.com/matiassalicru' }]
 
 export const COR = {
   title: 'COR Global Ltd',

@@ -62,8 +62,8 @@ export const ExperienceSection = () => {
          </SCSkillWrapper>
         ))}
       </SCSkillsContainer>
-      <SCBoxContainer onClick={onNotAvailable}>
-        <LinkButton url=''>{t('projectsButton')}</LinkButton>
+      <SCBoxContainer>
+        <LinkButton url='/projects'>{t('projectsButton')}</LinkButton>
       </SCBoxContainer>
       {showAlert && <Alert type='warn' time={2.5} text={t('alert')} />}
     </SCContainer>

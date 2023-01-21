@@ -2,9 +2,13 @@
 import { useContext, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+// Utils
+import ScrollToTop from './utils/ScrollToTop.js'
+
 // Components
 import { Home } from './containers/Home/Home'
-import { About } from './sections/AboutSection/About/About'
+import { AboutContainer } from './containers/About/AboutContainer'
+import { ProjectsContainer } from './containers/Projects/ProjectsContainer'
 
 // Styled-components
 import GlobalCSS from './global.css'
@@ -42,9 +46,11 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalCSS />
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<AboutContainer />} />
+          <Route path='/projects' element={<ProjectsContainer />} />
         </Routes>
       </Router>
       <SCFixedButtons>

@@ -62,5 +62,4 @@ export const SCLogo = styled.img`
   width: fit-content;
   max-height: 60px;
   margin: 10px 0;
-
 `

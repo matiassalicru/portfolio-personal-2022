@@ -24,6 +24,7 @@
     "about-alert": "Un poco de mí! :D"
   },
   "experience": {
+    "projects": "Últimos proyectos",
     "title": "Experiencia",
     "freelanceText": "Como freelancer trabajé con clientes donde tuvimos la oportunidad de compartir detalles del proyecto, yo compartí mis ideas acerca de desarrollo, herramientas de despliegue, dominios, etc. Estas experiencias me ayudaron a adentrarme en el ambiente del desarrollo web, y fue donde descubrí mi pasión por el frontend.",
     "freelanceRole": "Fullstack y más.",

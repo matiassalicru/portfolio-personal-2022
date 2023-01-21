@@ -38,6 +38,7 @@ export const SCButtonContainer = styled.div`
 
 export const SCNavContainer = styled.div`
   width: 100%;
+  position: absolute;
 `
 
 export const SCName = styled.p`
